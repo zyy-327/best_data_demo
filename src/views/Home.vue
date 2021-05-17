@@ -135,7 +135,45 @@
 				<!-- 右边 -->
 				<div class="content_top_right">
 					<div class="map">
-					<Map></Map>
+						<Map></Map>
+					</div>
+					<div class="cont">
+						<div class="cont_1">
+							<div class="cont_1_1">
+								<div class="cont_1_1_titile">设备总量</div>
+								<div class="cont_1_1_titile_name">同比</div>
+								<div class="cont_1_1_img">
+									<img src="../assets/组 1123.png" alt="" />
+								</div>
+								<div class="cont_1_1_titile_num">12%</div>
+							</div>
+							<span class="number_1">568,695</span>
+							<span class="number_1_name">台</span>
+						</div>
+						<div class="cont_1">
+							<div class="cont_1_1">
+								<div class="cont_1_1_titile">设备总量</div>
+								<div class="cont_1_1_titile_name">同比</div>
+								<div class="cont_1_1_img">
+									<img src="../assets/组 1123.png" alt="" />
+								</div>
+								<div class="cont_1_1_titile_num">12%</div>
+							</div>
+							<span class="number_1">8,695</span>
+							<span class="number_1_name">家</span>
+						</div>
+						<div class="cont_1">
+							<div class="cont_1_1">
+								<div class="cont_1_1_titile">覆盖国家/地区</div>
+								<div class="cont_1_1_titile_name">同比</div>
+								<div class="cont_1_2_img">
+									<img src="../assets/组 1126.png" alt="" />
+								</div>
+								<div class="cont_1_1_titile_num">12%</div>
+							</div>
+							<span class="number_1">95</span>
+							<span class="number_1_name">个</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -200,7 +238,7 @@ export default {
 		Goodline,
 		Pie,
 		Barexpend,
-		Map
+		Map,
 	},
 	data() {
 		return {
@@ -314,7 +352,7 @@ export default {
 					})
 					.then((res) => {
 						this.sky = res.data.HeWeather6[0].now.cond_txt
-						console.log(this.sky)
+						// console.log(this.sky)
 						// this.timerId = setTimeout(() => {
 						// 	this.getLocalCity(city)
 						// }, 1000)
@@ -345,7 +383,7 @@ export default {
 					.then((res) => {
 						// this.sky = res.data.HeWeather6[0].now.cond_txt
 						this.air = res.data.HeWeather6[0].air_now_city.pm25
-						console.log(this.air)
+						// console.log(this.air)
 						// this.timerId = setTimeout(() => {
 						// 	this.getLocalCity(city)
 						// }, 2000)
@@ -609,11 +647,79 @@ export default {
 			.content_top_right {
 				width: 55%;
 				height: 100%;
-				background-color: rgba(53,73,97,0.4);
-				.map{
+				background-color: rgba(53, 73, 97, 0.4);
+				.map {
 					width: 100%;
-					height: 80%;
-					border: 1px solid #fff;
+					height: 85%;
+					// border: 1px solid #fff;
+				}
+				.cont {
+					display: flex;
+					width: 100%;
+					height: 15%;
+					justify-content: space-around;
+					// border: 1px solid darkblue;
+					.cont_1 {
+						.cont_1_1 {
+							display: flex;
+								margin-bottom: .25rem;
+							.cont_1_1_titile {
+								font-size: 0.225rem;
+								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+								font-weight: 400;
+								color: #ffffff;
+								margin-right: .125rem;
+							}
+							.cont_1_1_titile_name {
+								font-size: 0.175rem;
+								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+								font-weight: 400;
+								color: #ffffff;
+								margin-right: .125rem;
+								margin-top: .025rem;
+							}
+							.cont_1_1_img {
+								width: 0.175rem;
+								height: 0.225rem;
+								margin-right: .125rem;
+								img {
+									// display: block;
+									width: 0.175rem;
+									height: 0.225rem;
+								}
+							}
+							.cont_1_2_img {
+								width: 0.175rem;
+								height: 0.225rem;
+								margin-right: .125rem;
+								margin-top: .025rem;
+								img {
+									// display: block;
+									width: 0.175rem;
+									height: 0.225rem;
+								}
+							}
+							.cont_1_1_titile_num {
+								font-size: 0.175rem;
+								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+								font-weight: 400;
+								color: #ffffff;
+								margin-top: .025rem;
+							}
+						}
+						.number_1 {
+							font-size: 0.3rem;
+							font-family: Source Han Sans CN, Source Han Sans CN-Bold;
+							font-weight: 700;
+							color: #ffffff;
+						}
+						.number_1_name {
+							font-size: .2rem;
+							font-family: Source Han Sans CN, Source Han Sans CN-Regular;
+							font-weight: 400;
+							color: #ffffff;
+						}
+					}
 				}
 			}
 		}
@@ -626,7 +732,7 @@ export default {
 				// width: 5.625rem;
 				width: 27%;
 				height: 100%;
-					background-color: rgba(25, 57, 71,0.5);
+				background-color: rgba(25, 57, 71, 0.5);
 				// border: 1px solid red;
 				margin-right: 0.25rem;
 			}
@@ -634,7 +740,7 @@ export default {
 				// width: 3.4rem;
 				width: 15%;
 				// border: 1px solid darkgoldenrod;
-				background-color: rgba(25, 57, 71,0.5);
+				background-color: rgba(25, 57, 71, 0.5);
 				margin-right: 0.25rem;
 				.pie_1_chart {
 					height: 60%;
@@ -650,23 +756,23 @@ export default {
 						align-items: center;
 						background: url('../assets/组 1154.png') no-repeat;
 						background-size: 100% 100%;
-						margin-top: .063rem;
+						margin-top: 0.063rem;
 						.output_1 {
 							font-size: 0.15rem;
 							color: #ccc;
-							margin-left: .25rem;
-							width: .625rem;
+							margin-left: 0.25rem;
+							width: 0.625rem;
 							white-space: nowrap;
 						}
 						.number {
 							font-size: 0.2rem;
 							color: #fff;
-							margin-left: .5rem;
+							margin-left: 0.5rem;
 							font-weight: 700;
 						}
 						.number_1 {
 							color: #ccc;
-							margin-left: .25rem;
+							margin-left: 0.25rem;
 						}
 					}
 				}
@@ -675,19 +781,19 @@ export default {
 				// width: 5.25rem;
 				width: 20%;
 				// border: 1px solid white;
-				background-color: rgba(25, 57, 71,0.5);
+				background-color: rgba(25, 57, 71, 0.5);
 				margin-right: 0.25rem;
 			}
 			.pie {
 				// width: 3.475rem;
 				width: 16%;
-				background-color: rgba(25, 57, 71,0.4);
+				background-color: rgba(25, 57, 71, 0.4);
 				margin-right: 0.25rem;
 			}
 			.parts {
 				// width: 4.5rem;
 				width: 18%;
-				background-color: rgba(25, 57, 71,0.5);
+				background-color: rgba(25, 57, 71, 0.5);
 			}
 		}
 	}
