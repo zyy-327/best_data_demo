@@ -39,7 +39,7 @@ export default {
 					top: '20%',
 					right: '12%',
 					left: '8%',
-					bottom: '10%',
+					bottom: '12%',
 				},
 				legend: {
 					top: '5%',

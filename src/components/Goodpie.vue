@@ -39,7 +39,7 @@ export default {
 				legend: {
 					// x: 'center',
 					// y: "bottom",
-					top:'20%',
+					top:'18%',
 					right:'4%',
 					// itemWidth: 0,
         // itemHeight: 0,
@@ -129,7 +129,7 @@ export default {
 					}
 				},
 				legend:{
-					itemGap:titleFontSize*6,
+					itemGap:titleFontSize*5.5,
 					itemWidth:titleFontSize*3,
 					itemHeight:titleFontSize*2,
 					textStyle:{

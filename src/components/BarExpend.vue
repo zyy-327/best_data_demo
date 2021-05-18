@@ -52,7 +52,7 @@
 						left: '3%',
 						top: '15%',
 						right: '7%',
-						bottom: '2%',
+						bottom: '3%',
 						containLabel: true,
 					},
 					xAxis: {

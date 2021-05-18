@@ -48,7 +48,7 @@ export default {
           top:'17%',
 					left: '3%',
 					right: '4%',
-					bottom: '2%',
+					bottom: '3%',
 					containLabel: true,
 				},
 				xAxis: {

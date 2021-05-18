@@ -585,7 +585,7 @@ export default {
 									width: 0.75rem;
 									height: 0.75rem;
 									margin-left: 0.25rem;
-									margin-top: 0.125rem;
+									margin-top: 2px;
 								}
 							}
 						}
@@ -674,7 +674,7 @@ export default {
 			}
 		}
 		.content_bottom {
-			height: 29%;
+			height: 28%;
 			margin-top: 0.188rem;
 			display: flex;
 			.bar_1 {
@@ -688,7 +688,7 @@ export default {
 				background-color: rgba(25, 57, 71, 0.5);
 				margin-right: 0.25rem;
 				.pie_1_chart {
-					height: 60%;
+					height: 57%;
 					width: 100%;
 				}
 				.pie_1_title_num {

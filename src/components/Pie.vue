@@ -140,7 +140,7 @@
 					series: [
 						//图表的大小
 						{
-							radius: [titleFontSize * 10, titleFontSize * 18],
+							radius: [titleFontSize * 8, titleFontSize * 16],
 							center: ['50%', '55%'],
 							label: {
 								fontSize: titleFontSize * 2,
