@@ -28,7 +28,7 @@
 				</div>
 				<div class="icon_1"></div>
 			</div>
-		</header>
+		</header> 
 		<!-- 主内容 -->
 		<div class="content">
 			<!-- 上面 -->
@@ -364,15 +364,9 @@ export default {
 		},
 		//获取PM2.5
 		getAir(city) {
+			//申请的密钥,写死就行
 			let key = 'b708a6bcb36143a0ba843cde751f9f74'
-			// 					var data = {
-			// 	key: 'b708a6bcb36143a0ba843cde751f9f74', //申请的密钥,写死就行
-			// }
-			// data.output = 'jsonp'
 			if (city && city !== '') {
-				// this.timerId = setTimeout(() => {
-
-				// }, 5000)
 				this.$axios
 					.get('/skyapi/air/now', {
 						params: {
@@ -381,12 +375,8 @@ export default {
 						},
 					})
 					.then((res) => {
-						// this.sky = res.data.HeWeather6[0].now.cond_txt
 						this.air = res.data.HeWeather6[0].air_now_city.pm25
 						// console.log(this.air)
-						// this.timerId = setTimeout(() => {
-						// 	this.getLocalCity(city)
-						// }, 2000)
 					})
 					.catch((error) => {
 						console.log(error)
@@ -402,7 +392,6 @@ export default {
 	height: 100%;
 	background: url('../assets/小贝智能销售驾驶舱 – 2.png') no-repeat;
 	background-size: 100% 100%;
-	// box-sizing: border-box;
 	header {
 		display: flex;
 		justify-content: space-between;
@@ -410,9 +399,6 @@ export default {
 		width: 100%;
 		height: 0.75rem;
 		align-items: center;
-		// padding-left:.375rem;
-		// padding-right:.375rem;
-		// border: 1px solid red;
 		.sky {
 			display: flex;
 			align-items: center;
@@ -426,7 +412,6 @@ export default {
 			.sky_1 {
 				margin-left: 0.25rem;
 				margin-right: 0.25rem;
-				// display: flex;
 				img {
 					width: 0.525rem;
 					height: 0.525rem;
@@ -436,9 +421,6 @@ export default {
 				font-size: 0.225rem;
 				font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 				font-weight: 400;
-				// text-align: right;
-				// color: #fff;
-				// margin-left: 6.875rem;
 			}
 		}
 		.icon {
@@ -462,13 +444,10 @@ export default {
 			color: #ffffff;
 			letter-spacing: 7px;
 			text-shadow: 0px 0px 0.075rem #0080ff;
-			// font-style: italic;
 		}
 		.timer {
 			display: flex;
 			padding-top: 0.125rem;
-			// align-items: center;
-			// text-align: right;
 			font-size: 0.225rem;
 			margin-left: 1rem;
 			.time {
@@ -490,29 +469,23 @@ export default {
 	// 中间内容
 	.content {
 		height: 100%;
-		// border: 1px solid red;
 		padding: 0.25rem 0.375rem 0.375rem 0.375rem;
 		.content_top {
 			height: 60%;
 			display: flex;
-			// border: 1px solid darkgray;
 			// 上左
 			.content_top_left {
 				width: 45%;
 				height: 100%;
 				margin-right: 0.25rem;
-				// border: 1px solid darkorchid;
 				// 上排图表
 				.content-top_left_chart {
 					height: 50%;
 					margin-bottom: 0.125rem;
-					// border: 1px solid #ff0;
 					.content_top_left_num {
 						display: flex;
 						color: #fff;
-						// height: 0.75rem;
 						height: 18%;
-						// border: 1px solid red;
 						justify-content: space-between;
 						margin-bottom: 0.25rem;
 						.goon {
@@ -522,9 +495,6 @@ export default {
 								height: 0.75rem;
 							}
 							.title {
-								// width: 42px;
-								// height: 14px;
-								// opacity: 1;
 								font-size: 0.175rem;
 								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 								font-weight: 400;
@@ -533,25 +503,16 @@ export default {
 								margin-bottom: 0.188rem;
 							}
 							.num {
-								// display:inline;
-								// width: 78px;
-								// height: 26px;
-								// opacity: 1;
 								font-size: 0.3rem;
 								font-family: Source Han Sans CN, Source Han Sans CN-Bold;
 								font-weight: 700;
-								// text-align: left;
 								color: #ffffff;
 								margin-right: 0.125rem;
 							}
 							.num_title {
-								// width: 16px;
-								// height: 16px;
-								// opacity: 1;
 								font-size: 0.2rem;
 								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 								font-weight: 400;
-								// text-align: left;
 								color: #ffffff;
 							}
 						}
@@ -563,16 +524,13 @@ export default {
 						height: 75%;
 						display: flex;
 						background-color: #162a36;
-						// border: 1px solid #fff;
 						.line_1 {
 							width: 60%;
 							height: 100%;
-							// border: 1px solid red;
 						}
 						.pie_1 {
 							width: 40%;
 							height: 100%;
-							// border: 1px solid yellow;
 						}
 					}
 				}
@@ -580,7 +538,6 @@ export default {
 				.content-top_left_chart2 {
 					display: flex;
 					height: 49%;
-					// margin-top: 0.25rem;
 					.chart_left {
 						width: 50%;
 						height: 100%;
@@ -598,11 +555,8 @@ export default {
 						.title_num {
 							display: flex;
 							flex-flow: row wrap;
-							// justify-content: space-between;
 							.Asia {
 								width: 33.3%;
-								// height: 100px;
-								// border: 1px solid red;
 								.area {
 									font-size: 0.15rem;
 									font-family: Source Han Sans CN, Source Han Sans CN-Regular;
@@ -651,39 +605,36 @@ export default {
 				.map {
 					width: 100%;
 					height: 85%;
-					// border: 1px solid #fff;
 				}
 				.cont {
 					display: flex;
 					width: 100%;
 					height: 15%;
 					justify-content: space-around;
-					// border: 1px solid darkblue;
 					.cont_1 {
 						.cont_1_1 {
 							display: flex;
-								margin-bottom: .25rem;
+							margin-bottom: 0.25rem;
 							.cont_1_1_titile {
 								font-size: 0.225rem;
 								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 								font-weight: 400;
 								color: #ffffff;
-								margin-right: .125rem;
+								margin-right: 0.125rem;
 							}
 							.cont_1_1_titile_name {
 								font-size: 0.175rem;
 								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 								font-weight: 400;
 								color: #ffffff;
-								margin-right: .125rem;
-								margin-top: .025rem;
+								margin-right: 0.125rem;
+								margin-top: 0.025rem;
 							}
 							.cont_1_1_img {
 								width: 0.175rem;
 								height: 0.225rem;
-								margin-right: .125rem;
+								margin-right: 0.125rem;
 								img {
-									// display: block;
 									width: 0.175rem;
 									height: 0.225rem;
 								}
@@ -691,10 +642,9 @@ export default {
 							.cont_1_2_img {
 								width: 0.175rem;
 								height: 0.225rem;
-								margin-right: .125rem;
-								margin-top: .025rem;
+								margin-right: 0.125rem;
+								margin-top: 0.025rem;
 								img {
-									// display: block;
 									width: 0.175rem;
 									height: 0.225rem;
 								}
@@ -704,7 +654,7 @@ export default {
 								font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 								font-weight: 400;
 								color: #ffffff;
-								margin-top: .025rem;
+								margin-top: 0.025rem;
 							}
 						}
 						.number_1 {
@@ -714,7 +664,7 @@ export default {
 							color: #ffffff;
 						}
 						.number_1_name {
-							font-size: .2rem;
+							font-size: 0.2rem;
 							font-family: Source Han Sans CN, Source Han Sans CN-Regular;
 							font-weight: 400;
 							color: #ffffff;
@@ -726,25 +676,19 @@ export default {
 		.content_bottom {
 			height: 29%;
 			margin-top: 0.188rem;
-			// border: 1px solid darkorange;
 			display: flex;
 			.bar_1 {
-				// width: 5.625rem;
 				width: 27%;
 				height: 100%;
 				background-color: rgba(25, 57, 71, 0.5);
-				// border: 1px solid red;
 				margin-right: 0.25rem;
 			}
 			.pie_1 {
-				// width: 3.4rem;
 				width: 15%;
-				// border: 1px solid darkgoldenrod;
 				background-color: rgba(25, 57, 71, 0.5);
 				margin-right: 0.25rem;
 				.pie_1_chart {
 					height: 60%;
-					// border: 1px solid darkgoldenrod;
 					width: 100%;
 				}
 				.pie_1_title_num {
@@ -778,20 +722,16 @@ export default {
 				}
 			}
 			.line_2 {
-				// width: 5.25rem;
 				width: 20%;
-				// border: 1px solid white;
 				background-color: rgba(25, 57, 71, 0.5);
 				margin-right: 0.25rem;
 			}
 			.pie {
-				// width: 3.475rem;
 				width: 16%;
 				background-color: rgba(25, 57, 71, 0.4);
 				margin-right: 0.25rem;
 			}
 			.parts {
-				// width: 4.5rem;
 				width: 18%;
 				background-color: rgba(25, 57, 71, 0.5);
 			}

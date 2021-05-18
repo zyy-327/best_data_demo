@@ -49,7 +49,7 @@ export default {
 						},
 					},
 					roam: true, //是否允许缩放
-					zoom: 1.4, //地图大小
+					// zoom: 1.4, //地图大小
 					layoutCenter: ['50%', '50%'], //地图位置
 					layoutSize: '120%',
 					itemStyle: {
@@ -336,6 +336,10 @@ export default {
 		screenAdapter() {
 			const titleFontSize = (this.$refs.map_ref.offsetWidth / 100) * 2
 			const screenOption = {
+				geo: {
+					// map: 'world',
+					zoom: titleFontSize / 14,
+				},
 				series: [
 					{
 						label: {
