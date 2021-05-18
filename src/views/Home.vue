@@ -688,7 +688,7 @@ export default {
 				background-color: rgba(25, 57, 71, 0.5);
 				margin-right: 0.25rem;
 				.pie_1_chart {
-					height: 57%;
+					height: 60%;
 					width: 100%;
 				}
 				.pie_1_title_num {
