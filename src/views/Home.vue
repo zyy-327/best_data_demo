@@ -537,7 +537,7 @@ export default {
 				// 下排图表
 				.content-top_left_chart2 {
 					display: flex;
-					height: 49%;
+					height: 48.5%;
 					.chart_left {
 						width: 50%;
 						height: 100%;
@@ -553,10 +553,19 @@ export default {
 							margin-top: 0.125rem;
 						}
 						.title_num {
+							height: 90%;
 							display: flex;
 							flex-flow: row wrap;
+							// border: 1px solid red;
+							.Asia:nth-child(n+4){
+								// margin-bottom: .125rem;
+								// margin-top: 10px;
+							}
 							.Asia {
 								width: 33.3%;
+								height: 1.375rem;
+								// border: 1px solid rebeccapurple;
+								// height:50%;
 								.area {
 									font-size: 0.15rem;
 									font-family: Source Han Sans CN, Source Han Sans CN-Regular;
@@ -585,7 +594,7 @@ export default {
 									width: 0.75rem;
 									height: 0.75rem;
 									margin-left: 0.25rem;
-									margin-top: 2px;
+									margin-top: .125rem;
 								}
 							}
 						}
