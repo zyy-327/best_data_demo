@@ -557,10 +557,10 @@ export default {
 							display: flex;
 							flex-flow: row wrap;
 							// border: 1px solid red;
-							.Asia:nth-child(n+4){
-								// margin-bottom: .125rem;
-								// margin-top: 10px;
-							}
+							// .Asia:nth-child(n+4){
+							// 	// margin-bottom: .125rem;
+							// 	// margin-top: 10px;
+							// }
 							.Asia {
 								width: 33.3%;
 								height: 1.375rem;
